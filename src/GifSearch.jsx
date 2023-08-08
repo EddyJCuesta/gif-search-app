@@ -29,7 +29,6 @@ const GifSearch = ({setGifs}) => {
      // Store the Data in State   
         setGifs(data);
       })
-    // with that call store response in state
     }
 
     return(
@@ -39,6 +38,7 @@ const GifSearch = ({setGifs}) => {
           value={searchQuery}
           onChange={handleChange}
           placeholder="Search GIFs..."
+          required
         />
         <button type="submit">Search</button>
       </form>
