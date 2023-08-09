@@ -64,4 +64,26 @@ body {
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
+
+  .gif-container {
+    position: relative;
+  }
+  
+  .heart {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .faded {
+    opacity: 0.5;
+  }
+  
+  .solid {
+    opacity: 1;
+    color: red; /* Change the color to your desired solid heart color */
+  }
+  
   
