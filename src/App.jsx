@@ -17,13 +17,13 @@ const [gifs, setGifs] = useState([])
 
 
 
-  return (
-    <>
-     <h1>Gif Search</h1> 
-      <GifSearch setGifs={setGifs} />
-      <GifList gifs={gifs} />
-    </>
-  )
+return (
+  <div className="app">
+    <h1>Gif Search</h1>
+    <GifSearch setGifs={setGifs} />
+    <GifList gifs={gifs} />
+  </div>
+);
 }
 
 export default App

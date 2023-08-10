@@ -83,7 +83,97 @@ body {
   
   .solid {
     opacity: 1;
-    color: red; /* Change the color to your desired solid heart color */
+    color: red; 
+  }
+
+  .favorites-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
   }
   
+  .favorites-popup img {
+    width: 100px;
+    height: auto;
+    margin: 10px;
+  }
   
+  .favorites-popup button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-right: 20px;
+  }
+  
+  .favorites-popup button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* ... Other styles ... */
+
+.favorites-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  max-width: 90vw;
+  width: 400px;
+}
+
+.favorites-popup h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.favorites-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #f0f0f0;
+}
+
+.favorites-item img {
+  width: 80px;
+  height: auto;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+
+.favorites-item button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-right: 10px;
+  transition: background-color 0.2s;
+}
+
+.favorites-item button:hover {
+  background-color: #0056b3;
+}
+
+.favorites-item input[type="checkbox"] {
+  margin-right: 5px;
+}
