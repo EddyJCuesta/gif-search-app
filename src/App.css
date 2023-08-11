@@ -177,3 +177,34 @@ body {
 .favorites-item input[type="checkbox"] {
   margin-right: 5px;
 }
+
+/* Add this CSS in your stylesheets */
+.share-button {
+  display: flex;
+  margin-top: 10px;
+}
+
+.share-icon {
+  font-size: 24px;
+  margin-right: 10px;
+  cursor: pointer;
+  color: #333;
+  transition: color 0.2s;
+}
+
+.share-icon.facebook {
+  color: #1877f2;
+}
+
+.share-icon.twitter {
+  color: #1da1f2;
+}
+
+.share-icon.email {
+  color: #f39c12;
+}
+
+.share-icon:hover {
+  color: #000; /* Adjust the hover color as needed */
+}
+
