@@ -3,7 +3,7 @@ import { useState } from 'react';
 import axios from 'axios';
 
 // API KEY & URL
-const apikey = 'PCWbZtP6Jc2hY2TsPujrO9alK4xWo8HW'
+const apikey = 'h6Y1gQQVl1r958sm2qP5RmMpPyIVrqvX'
 const url = 'http://api.giphy.com/v1/gifs/search'
 
 const GifSearch = ({setGifs}) => {
