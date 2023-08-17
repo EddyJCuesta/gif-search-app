@@ -6,7 +6,7 @@ import './App.css';
 
 function App() {
 
-// MY STATES
+// State to hold the list of Gifs
 const [gifs, setGifs] = useState([])
 
 
