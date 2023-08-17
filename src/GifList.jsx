@@ -104,7 +104,7 @@ const GifList = ({ gifs }) => {
 
         {/* button to remove selected Gifs */}
       <button onClick={removeSelectedGifs}>
-        {isAnyGifSelected ? "Remove Selected GIFs" : "No Gifs selected"}
+        {isAnyGifSelected ? "Remove Selected GIFs" : "Select GIFs to remove"}
       </button>
 
         {/* Button to close favorites popup */}
