@@ -1,4 +1,5 @@
 // GifSearch.js
+// Create a New Component called GifSearch, that fetches the API Call(API Giphy Developers) using Axios, that is a functional component that renders an input field for the user to search for Gifs
 import { useState } from 'react';
 import axios from 'axios';
 

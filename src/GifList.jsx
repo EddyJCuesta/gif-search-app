@@ -1,3 +1,4 @@
+// Create a function that handles the GIFs update returned from the API handleSearch // Create a Gif list Component that Holds the new list of GIFs
 import { useState } from 'react';
 import { FacebookShareButton, TwitterShareButton, EmailShareButton } from 'react-share';
 
@@ -6,7 +7,6 @@ const GifList = ({ gifs }) => {
   const [favorites, setFavorites] = useState({});
   const [showFavorites, setShowFavorites] = useState(false);
   const [selectedGifsForRemoval, setSelectedGifsForRemoval] = useState([]);
-  const [selectedGifForSharing, setSelectedGifForSharing] = useState(null);
   const [isAnyGifSelected, setIsAnyGifSelected] = useState(false);
 
 
@@ -28,26 +28,6 @@ const GifList = ({ gifs }) => {
     });
     setFavorites(updatedFavorites);
     setSelectedGifsForRemoval([]);
-  };
-
-  const shareSelectedGif = (gif) => {
-    setSelectedGifForSharing(gif);
-    
-    if (navigator.share) {
-      navigator.share({
-        title: 'Shared GIF',
-        text: 'Check out this GIF!',
-        url: gif.images.fixed_height.url,
-      })
-      .then(() => {
-        console.log('GIF shared successfully.');
-      })
-      .catch((error) => {
-        console.error('Error sharing GIF:', error);
-      });
-    } else {
-      console.log('Sharing not supported in this browser.');
-    }
   };
 
   return (
