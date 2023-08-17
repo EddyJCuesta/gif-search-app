@@ -28,6 +28,7 @@ const GifList = ({ gifs }) => {
     });
     setFavorites(updatedFavorites);
     setSelectedGifsForRemoval([]);
+    setIsAnyGifSelected(false);
   };
 
   return (
@@ -51,6 +52,7 @@ const GifList = ({ gifs }) => {
         {getFavoriteGifs().map((gif) => (
           <div key={gif.id} className="favorites-item">
             <img src={gif.images.fixed_height.url} alt={`Favorite GIF`} />
+            
             <input
             type="checkbox"
             checked={selectedGifsForRemoval.includes(gif.id)}
@@ -62,7 +64,7 @@ const GifList = ({ gifs }) => {
               } else {
                 setSelectedGifsForRemoval((prevSelected) => [...prevSelected, gif.id]);
               }
-              setIsAnyGifSelected(selectedGifsForRemoval.length > 1);
+              setIsAnyGifSelected(selectedGifsForRemoval.length >= 0);
             }}
           />
           </div>
