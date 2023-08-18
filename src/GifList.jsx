@@ -86,19 +86,24 @@ const GifList = ({ gifs }) => {
         {/* Share all button */}
         <div className="share-all-button">
 
-          <FacebookShareButton url={getFavoriteGifs().map((gif) => gif.images.fixed_height.url).join(' ')}>
-            Share All on Facebook
+          <FacebookShareButton
+          className='share-button'
+           url={getFavoriteGifs().map((gif) => gif.images.fixed_height.url).join(' ')}>
+            <span className='share-icon facebook'>Share All on Facebook</span>
           </FacebookShareButton>
 
-          <TwitterShareButton url={getFavoriteGifs().map((gif) => gif.images.fixed_height.url).join(' ')}>
-            Share All on Twitter
+          <TwitterShareButton
+          className='share-button' 
+          url={getFavoriteGifs().map((gif) => gif.images.fixed_height.url).join(' ')}>
+            <span className='share-icon twitter'>Share All on Twitter</span>
           </TwitterShareButton>
 
           <EmailShareButton
+            className='share-button'
             subject="Check out these GIFs!"
             body={`Check out these cool GIFs:\n${getFavoriteGifs().map((gif) => gif.images.fixed_height.url).join('\n')}`}
           >
-            Share All via Email
+            <span className='share-icon email'>Share All via Email</span>
           </EmailShareButton>
         </div>
 
