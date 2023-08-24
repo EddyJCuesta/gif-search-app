@@ -42,6 +42,7 @@ const GifSearch = ({setGifs}) => {
           onChange={handleChange}
           placeholder="Search GIFs..."
           required
+          className='search-input'
         />
         <button type="submit">Search</button>
       </form>

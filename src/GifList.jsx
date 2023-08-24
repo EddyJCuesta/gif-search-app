@@ -37,6 +37,7 @@ const GifList = ({ gifs }) => {
   };
 
   return (
+    <div className='gif-list-wrapper'>
     <div className="gif-list">
       {/*  Loop through all Gifs */}
       {gifs.map((gif) => (
@@ -52,6 +53,7 @@ const GifList = ({ gifs }) => {
           </div>
         </div>
       ))}
+      </div>
       {/* Button to show favorite Gifs */}
       <button onClick={() => setShowFavorites(true)}>Show Favorites</button>
 

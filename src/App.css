@@ -49,6 +49,14 @@ body {
   button:hover {
     background-color: #0056b3;
   }
+
+  .gif-list-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+  }
   
   .gif-list {
     display: grid;
@@ -119,8 +127,6 @@ body {
   .favorites-popup button:hover {
     background-color: #0056b3;
   }
-  
-  /* ... Other styles ... */
 
 .favorites-popup {
   position: fixed;
@@ -206,4 +212,108 @@ body {
 .share-icon:hover {
   color: #000; 
 }
+
+/* Media Query */
+@media (min-width: 1024px) {
+  body {
+    padding: 20px;
+  }
+
+  .gif-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+  }
+
+  .favorites-popup {
+    width: 30%;
+  }
+
+  .favorites-popup h2 {
+    font-size: 28px;
+  }
+
+  .favorites-item img {
+    width: 100px;
+    margin-right: 14px;
+  }
+
+  .favorites-item button {
+    font-size: 16px;
+    padding: 8px 14px;
+  }
+
+  .share-button {
+    margin-top: 14px;
+  }
+
+  .share-icon {
+    font-size: 24px;
+    margin-right: 12px;
+  }
+}
+
+@media (min-width: 768px) {
+  body {
+    padding: 20px;
+  }
+
+}
+
+@media (max-width: 375px) {
+
+  form, h1 {
+    padding-left: 10px;
+  }
+
+  input[type="text"] {
+    width: 260px;
+  }
+
+  .gif-list {
+    grid-template-columns: repeat(3, minmax(100px, 1fr)); 
+    gap: 8px;
+  }
+
+  .gif-container {
+    position: relative;
+    width: 100%;
+  }
+
+  .heart {
+    font-size: 20px;
+    top: 8px;
+    right: 8px;
+  }
+
+  .favorites-popup {
+    width: 90%;
+  }
+
+  .favorites-popup h2 {
+    font-size: 18px;
+  }
+
+  .favorites-item img {
+    width: 60px;
+    margin-right: 8px;
+  }
+
+  .favorites-item button {
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+
+  .share-button {
+    margin-top: 10px;
+  }
+
+  .share-icon {
+    font-size: 20px;
+    margin-right: 8px;
+  }
+}
+
+
+
 
