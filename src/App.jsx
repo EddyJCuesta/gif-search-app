@@ -16,6 +16,7 @@ return (
     <h1>Gif Search</h1>
     <GifSearch setGifs={setGifs} />
     <GifList gifs={gifs} />
+    <p>Created at Juno College</p>
   </div>
 );
 }

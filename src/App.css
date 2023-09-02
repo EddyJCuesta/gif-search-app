@@ -50,6 +50,11 @@ body {
     background-color: #0056b3;
   }
 
+  p {
+    text-align: center;
+    padding: 20px;
+  }
+
   .gif-list-wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -260,14 +265,14 @@ body {
 
 }
 
-@media (max-width: 375px) {
+@media (max-width: 320px) {
 
   form, h1 {
     padding-left: 10px;
   }
 
   input[type="text"] {
-    width: 260px;
+    width: 225px;
   }
 
   .gif-list {
