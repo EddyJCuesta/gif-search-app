@@ -268,11 +268,13 @@ body {
 @media (max-width: 320px) {
 
   form, h1 {
-    padding-left: 10px;
+    padding-left: 25px;
   }
 
   input[type="text"] {
     width: 225px;
+    margin-right: 6px;
+    margin-left: 11px;
   }
 
   .gif-list {
