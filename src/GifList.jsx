@@ -4,6 +4,7 @@ import { FacebookShareButton, TwitterShareButton, EmailShareButton } from 'react
 
 
 const GifList = ({ gifs }) => {
+  // State to manage favorite GIFs
   const [favorites, setFavorites] = useState({});
   const [showFavorites, setShowFavorites] = useState(false);
   // State to manage selected gifs for removal and the button state
@@ -34,8 +35,6 @@ const GifList = ({ gifs }) => {
       setFavorites(storedFavorites);
     }, []);
   
-   
-
   // Function to remove selected gifs
   const removeSelectedGifs = () => {
     const updatedFavorites = { ...favorites };
