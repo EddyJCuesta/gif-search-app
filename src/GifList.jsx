@@ -1,28 +1,40 @@
 // GifList.js
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { FacebookShareButton, TwitterShareButton, EmailShareButton } from 'react-share';
 
 
 const GifList = ({ gifs }) => {
-  // State to manage favorite gifs and whether to show favorites popup
   const [favorites, setFavorites] = useState({});
   const [showFavorites, setShowFavorites] = useState(false);
   // State to manage selected gifs for removal and the button state
   const [selectedGifsForRemoval, setSelectedGifsForRemoval] = useState([]);
   const [isAnyGifSelected, setIsAnyGifSelected] = useState(false);
 
-  // Function to toggle the favorite status of a gif
+  // Function to toggle the favorite status of a gif and store it in local storage
   const toggleFavorite = (gifId) => {
-    setFavorites((prevFavorites) => ({
-      ...prevFavorites,
-      [gifId]: !prevFavorites[gifId],
-    }));
+    setFavorites((prevFavorites) => {
+      const updatedFavorites = {
+        ...prevFavorites,
+        [gifId]: !prevFavorites[gifId],
+      };
+      // Store updated favorites in local storage
+      localStorage.setItem('favorites', JSON.stringify(updatedFavorites));
+      return updatedFavorites;
+    });
   };
 
   // Function to get an array of favorite gifs
   const getFavoriteGifs = () => {
     return gifs.filter((gif) => favorites[gif.id]);
   };
+  
+    // Retrieve favorites from local storage when the component mounts
+    useEffect(() => {
+      const storedFavorites = JSON.parse(localStorage.getItem('favorites')) || {};
+      setFavorites(storedFavorites);
+    }, []);
+  
+   
 
   // Function to remove selected gifs
   const removeSelectedGifs = () => {

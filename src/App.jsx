@@ -9,13 +9,14 @@ function App() {
 // State to hold the list of Gifs
 const [gifs, setGifs] = useState([])
 
-
+ // State to manage favorite gifs
+const [favorites, setFavorites] = useState({});
 
 return (
   <div className="app">
     <h1>Gif Search</h1>
     <GifSearch setGifs={setGifs} />
-    <GifList gifs={gifs} />
+    <GifList gifs={gifs} favorites={favorites} setFavorites={setFavorites} />
     <p>Created at Juno College</p>
   </div>
 );
