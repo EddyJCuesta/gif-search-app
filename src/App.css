@@ -273,8 +273,8 @@ body {
 
   input[type="text"] {
     width: 225px;
-    margin-right: 6px;
-    margin-left: 11px;
+    margin-right: 3px;
+    margin-left: 0px;
   }
 
   .gif-list {
